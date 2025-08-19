@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    srand(time(0));
+    int RandomNumber = rand() % 100 + 1;
+    int Guess;
+
+    cout << "Hey!! I have generated a number between 1 and 100.\n";
+    cout << "Let's see if you  can guess what it is?\n";
+    do {
+        cout << "HEY, Enter your guess: ";
+        cin >> Guess;
+        if (Guess > RandomNumber) {
+            cout << "Oops the gues is too high! Try again.\n";
+        } else if (Guess < RandomNumber) {
+            cout << "Oops the gues is too too low! Try again.\n";
+        } else {
+            cout << "Wohhhh Congratulations! You guessed the correct number: " << RandomNumber << endl;
+        }
+    } while (Guess != RandomNumber);
+    return 0;
+}
